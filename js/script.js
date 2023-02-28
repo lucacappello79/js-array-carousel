@@ -3,10 +3,19 @@ const images = ["img/01.webp", "img/02.webp", "img/03.webp", "img/04.webp", "img
 const arrowUpEl = document.getElementById("arrow-up");
 const arrowDownEl = document.getElementById("arrow-down");
 const activeImgEl = document.getElementById("active-img")
-const dotWrapperEl = document.getElementById("dots-wrapper")
+const dotsWrapperEl = document.getElementById("dots-wrapper")
+
+for (let i = 0; i < images.length; i++) {
+
+    let dotEl = document.createElement("div");
+
+    dotsWrapperEl.append(dotEl)
+
+    dotEl.style.backgroundColor = "white"
+    
+}
 
 let index = 0;
-
 activeImgEl.src = images[index];
 
 arrowUpEl.addEventListener("click", function() {
