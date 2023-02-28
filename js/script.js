@@ -12,10 +12,11 @@ for (let i = 0; i < images.length; i++) {
     dotsWrapperEl.append(dotEl)
 
     dotEl.style.backgroundColor = "white"
-    dotEl.style.width = "20px";
-    dotEl.style.height = "20px";
+    dotEl.style.width = "13px";
+    dotEl.style.height = "13px";
     dotEl.style.borderRadius = "50%";
     dotEl.style.border = "1px solid green";
+    dotEl.style.opacity = ".7";
 
 }
 
@@ -26,12 +27,17 @@ arrowUpEl.addEventListener("click", function() {
 
     //index++;
     //activeImgEl.src = images[index];
-
     if (index < images.length - 1) {
 
         index++;
 
         activeImgEl.src = images[index];
+
+      } else {
+
+        index = 0;
+
+        activeImgEl.src = images[index]
 
       }
 
@@ -45,6 +51,11 @@ arrowDownEl.addEventListener("click", function() {
 
         activeImgEl.src = images[index];
 
+      } else {
+
+        index = 4;
+        
+        activeImgEl.src = images[index]
       }
 
 });
