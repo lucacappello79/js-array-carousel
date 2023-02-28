@@ -7,17 +7,13 @@ const dotsWrapperEl = document.getElementById("dots-wrapper")
 
 for (let i = 0; i < images.length; i++) {
 
-    let dotEl = document.createElement("div");
+  let dotEl = document.createElement("div");
 
-    dotsWrapperEl.append(dotEl)
+  dotsWrapperEl.append(dotEl)
 
-    dotEl.style.backgroundColor = "white"
-    dotEl.style.width = "13px";
-    dotEl.style.height = "13px";
-    dotEl.style.borderRadius = "50%";
-    dotEl.style.border = "1px solid green";
-    dotEl.style.opacity = ".7";
-
+  dotEl.style.cssText = `background-color: white; width: 13px; 
+  height: 13px; border: 1px solid white;
+  border-radius: 50%; opacity: .5;`;
 }
 
 let index = 0;
@@ -25,25 +21,47 @@ activeImgEl.src = images[index];
 
 arrowUpEl.addEventListener("click", function() {
 
-    //index++;
-    //activeImgEl.src = images[index];
-    if (index < images.length - 1) {
+  /*--------soluzione 1
+  index++;
+  activeImgEl.src = images[index];
+  */
 
-        index++;
+  /*--------soluzione 2 da testare
+  index++;
+  if (index >= images.length) {
+   index = 0; 
+  }
+  activeImgEl.src = images[index];
+  */
 
-        activeImgEl.src = images[index];
 
-      } else {
+  if (index < images.length - 1) {
 
-        index = 0;
+    index++;
 
-        activeImgEl.src = images[index]
+    activeImgEl.src = images[index];
 
-      }
+  } else {
+
+    index = 0;
+
+    activeImgEl.src = images[index]
+
+  }
 
 });
 
 arrowDownEl.addEventListener("click", function() {
+
+
+  /* ------sempre parte della soluzione 2 da testare
+  index--;
+  if (index < 0) {
+    index = images.length - 1; // wrap around to last image
+  }
+  activeImgEl.src = images[index];
+  */
+
 
     if (index > 0) {
 
