@@ -11,16 +11,27 @@ activeImgEl.src = images[index];
 
 arrowUpEl.addEventListener("click", function() {
 
-    index++;
+    //index++;
+    //activeImgEl.src = images[index];
 
-    activeImgEl.src = images[index];
+    if (index < images.length - 1) {
+
+        index++;
+
+        activeImgEl.src = images[index];
+
+      }
 
 });
 
 arrowDownEl.addEventListener("click", function() {
 
-    index--;
+    if (index > 0) {
 
-    activeImgEl.src = images[index];
+        index--;
+
+        activeImgEl.src = images[index];
+
+      }
 
 });
