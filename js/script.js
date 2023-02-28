@@ -12,7 +12,11 @@ for (let i = 0; i < images.length; i++) {
     dotsWrapperEl.append(dotEl)
 
     dotEl.style.backgroundColor = "white"
-    
+    dotEl.style.width = "20px";
+    dotEl.style.height = "20px";
+    dotEl.style.borderRadius = "50%";
+    dotEl.style.border = "1px solid green";
+
 }
 
 let index = 0;
