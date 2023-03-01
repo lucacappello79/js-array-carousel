@@ -1,10 +1,6 @@
-/* *{
-    border: 1px solid black;
-} */
 
 .container-fluid{
     max-width: 1200px;
-
 }
 
 .img-wrapper{
@@ -52,3 +48,6 @@
     min-height: 100px;
 }
 
+#dots-wrapper .circle.active{
+    opacity: 1.0;
+}
